@@ -1,11 +1,13 @@
 <template>
-    <div class="card">
-        <div class="card-header"> 
-            {{ producto.title }}
-        </div>
-        <div class="card-body">
-            {{ producto.price }}
-            {{ producto.description }}
+    <div class="col-md-12">
+        <div class="actions card ">
+            <div class="card-header bg-info "> 
+                {{ producto.title }}
+            </div>
+            <div class="card-body">
+                {{ producto.humanPrice }}
+                {{ producto.description }}
+            </div>
         </div>
     </div>
 </template>

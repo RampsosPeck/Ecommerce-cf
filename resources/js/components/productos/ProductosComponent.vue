@@ -1,14 +1,11 @@
 <template>
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-12">
-                <div  v-for="producto in productos">
-                    
-                <productos-car-component v-bind:producto="producto" >
+        <material-transition-group tag="div"  class="row justify-content-center">
+                                     
+                <productos-car-component v-for="(producto, index)  in productos" :data-index="index" :key="producto.id" v-bind:producto="producto" >
                 </productos-car-component>
-                </div>
-            </div>
-        </div>
+                                
+        </material-transition-group>
     </div>
 </template>
 
@@ -17,12 +14,22 @@
         data(){
             return {
                 name: 'Productos Component',
-                productos:[
-                    {title: 'Curso de Ruby', price: 200, description: 'Hola mundo'},
-                    {title: 'Curso de Laravel', price: 200, description: 'Hola memes'}
-                ]
+                productos:[],
+                endpoint: "/productos"
             }
         }, 
+        created(){
+            this.fetchProductos();
+        },
+        methods: {
+            fetchProductos(){
+                axios.get(this.endpoint).then((res)=>{
+                    this.productos = res.data.data;
+                    console.log( res.data.data);
+                });
+            } 
+            
+        },
         mounted() {
             console.log('Component mounted.')
         }

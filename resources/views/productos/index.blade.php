@@ -7,7 +7,7 @@
 
 			<productos-component></productos-component>
 			
-		@foreach($productos as $producto)
+		<!--@foreach($productos as $producto)
 			<div class="card actions">
 				<div class="card-header">
 					<h2>
@@ -19,7 +19,7 @@
 					{{ $producto->description }}
 				</div> 
 			</div>			
-		@endforeach
+		@endforeach  -->
 		<div class="actions text-center">
 			{{ $productos->links() }}
 		</div>

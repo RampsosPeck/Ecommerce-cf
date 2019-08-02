@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use Ecommerce\Producto;
 
+use Ecommerce\Http\Resources\ProductosCollection;
+
 class ProductosController extends Controller
 {
 
@@ -17,9 +19,13 @@ class ProductosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $productos = Producto::paginate(2);
+
+        if($request->wantsJson()){
+            return new ProductosCollection($productos);
+        }
 
         return view('productos.index',['productos'=> $productos]);
     }

@@ -22,6 +22,7 @@ window.Vue = require('vue');
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('productos-component', require('./components/productos/ProductosComponent.vue').default);
 Vue.component('productos-car-component', require('./components/productos/ProductCarComponent.vue').default);
+Vue.component('material-transition-group', require('./components/animaciones/MaterialCollectionComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
