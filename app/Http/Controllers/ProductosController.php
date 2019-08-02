@@ -8,6 +8,8 @@ use Ecommerce\Producto;
 
 use Ecommerce\Http\Resources\ProductosCollection;
 
+use Ecommerce\ShoppingCart;
+
 class ProductosController extends Controller
 {
 
@@ -21,13 +23,16 @@ class ProductosController extends Controller
      */
     public function index(Request $request)
     {
-        $productos = Producto::paginate(2);
+        
+
+
+        $productos = Producto::paginate(15);
 
         if($request->wantsJson()){
             return new ProductosCollection($productos);
         }
 
-        return view('productos.index',['productos'=> $productos]);
+        return view('productos.index',['productos'=> $productos  ]);
     }
 
     /**
