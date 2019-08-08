@@ -2,7 +2,9 @@
     <div class="col-md-12">
         <div class="actions card ">
             <div class="card-header bg-info "> 
-                {{ producto.title }}
+                <a :href="'/productos/'+ producto.id ">
+                    {{ producto.title }}
+                </a>
             </div>
             <div class="card-body">
                 {{ producto.humanPrice }}

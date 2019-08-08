@@ -41,6 +41,7 @@ Vue.component('productos-car-component', require('./components/productos/Product
 Vue.component('material-transition-group', require('./components/animaciones/MaterialCollectionComponent.vue').default);
 Vue.component('add-producto-btn', require('./components/productos/AddToCartComponent.vue').default);
 Vue.component('productos-contar', require('./components/shopping_cart/CounterComponent.vue').default);
+Vue.component('productos-shopping-component', require('./components/shopping_cart/ProductosShoppingCartComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
