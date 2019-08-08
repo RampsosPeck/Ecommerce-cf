@@ -41,7 +41,8 @@
                         <!-- Authentication Links -->
 
                         <li class="nav-link">
-                            {{ $productosCount  }}
+                           <!-- {{ $productosCount  }}  -->
+                           <productos-contar :count="{{ $productosCount }}"></productos-contar>
                         </li>
 
                         @guest

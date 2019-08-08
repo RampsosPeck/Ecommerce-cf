@@ -14,9 +14,16 @@
 					
 				</div>
 				<div class="card-footer">
-					<button type="button" name="button" class="btn btn-success">
-						Agregar al carrito
-					</button>
+					<!--{!! Form::open(['method' => 'POST' , 'url' => '/in_shopping_carts']) !!}
+						
+						<input type="hidden" name="producto_id" value="{{ $producto->id }}">
+
+					<input type="submit" class="btn btn-success" value="Agregar al carrito">
+
+					{!! Form::close() !!} -->
+
+					<add-producto-btn :producto='{!! json_encode($producto) !!}' ></add-producto-btn>
+					 
 					@include('productos.delete')
 				</div>
 			</div>

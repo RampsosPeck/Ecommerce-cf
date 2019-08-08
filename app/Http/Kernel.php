@@ -61,6 +61,7 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'first.user' => \Ecommerce\Http\Middleware\ValidateFirstUserDignUp::class,
+        'shopping_cart' => \Ecommerce\Http\Middleware\SetShoppingCart::class,
 
     ];
 

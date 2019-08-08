@@ -22,4 +22,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('productos','ProductosController');
 
+Route::resource('in_shopping_carts','ProductInShoppingCartsController',['only' => ['store','destroy']]); 
+
 

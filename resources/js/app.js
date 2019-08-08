@@ -8,6 +8,22 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+
+const Vuex = require('vuex');
+window.store = new Vuex.Store({
+	state: {
+		productosCount: 2
+	},
+	mutations:{
+		increment(state){
+			return state.productosCount++
+		},
+		set(state, value){
+			return state.productosCount = value
+		}
+	}
+})
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -23,6 +39,8 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 Vue.component('productos-component', require('./components/productos/ProductosComponent.vue').default);
 Vue.component('productos-car-component', require('./components/productos/ProductCarComponent.vue').default);
 Vue.component('material-transition-group', require('./components/animaciones/MaterialCollectionComponent.vue').default);
+Vue.component('add-producto-btn', require('./components/productos/AddToCartComponent.vue').default);
+Vue.component('productos-contar', require('./components/shopping_cart/CounterComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
