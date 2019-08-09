@@ -82,6 +82,8 @@
             <div class="content">
                 <div class="title m-b-md">
                     Ecommercecf
+                    <div>
+                    <img src="/img/online-payment.png" alt="" width="150"></div>
                 </div>
 
                 <div class="links">

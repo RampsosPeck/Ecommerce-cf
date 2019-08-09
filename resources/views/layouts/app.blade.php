@@ -39,6 +39,9 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
+                        <li class="nav-link">
+                            <a href="/home" >Panel de control</a>
+                        </li>
 
                         <li class="nav-link">
                            <!-- {{ $productosCount  }}  -->

@@ -27,3 +27,11 @@ Route::get('/carrito','ShoppingCartController@show')->name('shopping_cart.show')
 
 Route::get('/carrito/productos','ShoppingCartController@productos')->name('shopping_cart.productos');
 
+//Rutas paypal
+Route::get('/pagar','PaymentsController@pay')->name('payments.pay');
+Route::get('/pagar/completar','PaymentsController@execute')->name('payments.execute');
+ 
+
+
+
+

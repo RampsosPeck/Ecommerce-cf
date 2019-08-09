@@ -25,7 +25,7 @@
 				<img src="/img/paypal.png" alt="" width="80">
 				<hr>
 				<div >
-					<a href="" class="btn btn-primary"> Proceder al pago</a>
+					<a href="/pagar" class="btn btn-primary"> Proceder al pago</a>
 				</div>
 			</div>
 			
